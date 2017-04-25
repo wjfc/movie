@@ -6,10 +6,11 @@
   @change="handleItemChange"
   :props="props"
 ></el-cascader>
-    <button @click="setCity">确定</button>
+    <el-button type="primary" icon="search"  @click="setCity">选择上映城市</el-button>
    </div>
 </template>
 <script>
+// 省市二级联动组件
 import { provinces, cities} from '../constant';
 
   export default {

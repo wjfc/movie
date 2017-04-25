@@ -28,6 +28,7 @@ body {
   }
  h2 {
      margin: 10px;
+     color: #20A0FF;
  }
   .movieItem .movieImg {
       padding-left: 10px;
@@ -79,9 +80,8 @@ body {
 </style>
 <template>
     <div class="in_theaters">
-        <div v-if="loading">
+        <div v-if="!in_theatersList">
             <el-table v-loading="loading" element-loading-text="拼命加载中" style="width: 100%">
-                
             </el-table>
         </div>
        <div v-if="in_theatersList">

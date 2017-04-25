@@ -26,8 +26,10 @@ export const getComing_soon = () => {
 export const getNew_movies = () => {
     return instance.get(API_ROOT.getNew_movies);
 }
-export const getITop250 = () => {
-    return instance.get(API_ROOT.getITop250);
+export const getTop250 = (params) => {
+    return instance.get(API_ROOT.getITop250, {
+         params:params
+    });
 }
 export const getWeekly = () => {
     return instance.get(API_ROOT.getWeekly);
