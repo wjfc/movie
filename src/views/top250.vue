@@ -79,7 +79,7 @@ body {
   }
 </style>
 <template>
-    <div class="in_theaters">
+    <div class="top250">
         <div v-if="!top250List">
             <el-table v-loading="loading" element-loading-text="拼命加载中" style="width: 100%">
             </el-table>
@@ -90,7 +90,8 @@ body {
             </div>
             <el-card class="box-card">
                 <div v-for="(item,index) in top250List.subjects" class="text item">
-                    <el-row>
+                 <router-link :to="{name: 'detail', params: {id: item.id}}">
+                        <el-row>
                         <el-col :span="8">
                         <div class="grid-content bg-purple">
                             <div class="movieTitle">
@@ -134,6 +135,8 @@ body {
                             </div>
                         </el-col>
                     </el-row>
+                </router-link>
+                   
                 </div>
             </el-card>
        </div>
@@ -164,19 +167,13 @@ export default {
         components: {
          
         },
-    // computed: mapState({
-    //     top250List: state => state.top250List
-    // }),
+ 
     computed: {
         top250List() {
             return this.$store.state.top250.top250List
         }
     },
-    // methods: {
-    //     ...mapActions({
-    //         getIn_theaters: 'getIn_theaters'
-    //     })
-    // },
+   
     mounted () {
         if(!this.top250List) {
             this.getTop250( {

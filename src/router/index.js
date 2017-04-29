@@ -7,7 +7,9 @@ let routes = [
         component:  resolve => require(["../components/Home.vue"], resolve),
         children: [
             {
-              path: "/in_theaters", name: "in_theaters", component: resolve => require(["../views/in_theaters.vue"], resolve)
+              path: "/in_theaters", 
+              name: "in_theaters", 
+              component: resolve => require(["../views/in_theaters.vue"], resolve)
             },
             {
               path: "/new_movies", name: "new_movies", component: resolve => require(["../views/new_movies.vue"], resolve)
@@ -21,6 +23,9 @@ let routes = [
              {
               path: "/coming_soon", name: "coming_soon", component: resolve => require(["../views/coming_soon.vue"], resolve)
             },
+            {
+                path: "/detail/:id?", name: "detail", component: resolve => require(["../views/detail.vue"], resolve)
+            }
         ]
     }
 ];

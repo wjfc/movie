@@ -91,7 +91,8 @@ body {
             </div>
             <el-card class="box-card">
                 <div v-for="(item,index) in in_theatersList.subjects" class="text item">
-                    <el-row>
+                    <router-link :to="{name: 'detail', params: {id: item.id}}">
+                        <el-row>
                         <el-col :span="8">
                         <div class="grid-content bg-purple">
                             <div class="movieTitle">
@@ -135,6 +136,7 @@ body {
                             </div>
                         </el-col>
                     </el-row>
+                    </router-link>
                 </div>
             </el-card>
        </div>

@@ -5,6 +5,7 @@ const developApi = {
     getNew_movies: '/movie/new_movies',
     getITop250: '/movie/top250',
     getWeekly: '/movie/weekly',
+    getDetail: '/movie/subject'
 }
 API_ROOT = developApi;
 export default API_ROOT;

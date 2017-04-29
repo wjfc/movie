@@ -6,7 +6,7 @@
   @change="handleItemChange"
   :props="props"
 ></el-cascader>
-    <el-button type="primary" icon="search"  @click="setCity">选择上映城市</el-button>
+    <el-button type="primary" icon="search"  @click="setCity">确认</el-button>
    </div>
 </template>
 <script>

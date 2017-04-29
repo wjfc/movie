@@ -13,6 +13,7 @@ const mutations = {
      Vue.set(state, 'top250List', data);
     }
 };
+
 const actions = {
     getTop250({ commit },params) {
         getTop250(params).then(response => {

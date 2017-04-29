@@ -8,3 +8,6 @@ export const TOP250_SUCCESS = 'TOP250_SUCCESS';
 export const TOP250_FAIL = 'TOP250_FAIL';
 export const WEEKLY_SUCCESS = 'WEEKLY_SUCCESS';
 export const WEEKLY_FAIL = 'WEEKLY_FAIL';
+
+export const DETAIL_SUCCESS = 'DETAIL_SUCCESS';
+export const DETAIL_FAIL = 'DETAIL_FAIL';
